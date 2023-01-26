@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Is Hot Dog?</title>
+  </head>
+  <body>
+    <h1>Is Hot Dog?</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    <img
+      src="{{ url_for('static',filename=img_name)}}"
+      width="280"
+      height="280"
+    />
+    <h2>{{class_name}}</h2>
+    <p>{{label}}</p>
+  </body>
+</html>
